@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> edbc812e01a445f37ed589b1b5c734bb4348c968
 kind: PersistentVolume
 apiVersion: v1
 metadata:
@@ -10,7 +14,12 @@ spec:
   accessModes:
     - ReadWriteOnce
   hostPath:
+<<<<<<< HEAD
     path: "/mongo_data/"
+=======
+    path: "/mongo_data/":
+
+>>>>>>> edbc812e01a445f37ed589b1b5c734bb4348c968
 ---
 kind: PersistentVolumeClaim
 apiVersion: v1
@@ -22,7 +31,13 @@ spec:
   resources:
     requests:
       storage: 30Gi
+<<<<<<< HEAD
 ---
+=======
+
+---
+
+>>>>>>> edbc812e01a445f37ed589b1b5c734bb4348c968
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
