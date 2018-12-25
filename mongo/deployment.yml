@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> 8b1ae51ec6e10385b3997be8f589c7ddf5622511
 kind: PersistentVolume
 apiVersion: v1
 metadata:
@@ -14,11 +10,7 @@ spec:
   accessModes:
     - ReadWriteOnce
   hostPath:
-<<<<<<< HEAD
-    path: "/mongo_data/":
-=======
     path: "/mongo_data/"
->>>>>>> 8b1ae51ec6e10385b3997be8f589c7ddf5622511
 ---
 kind: PersistentVolumeClaim
 apiVersion: v1
@@ -31,32 +23,6 @@ spec:
     requests:
       storage: 30Gi
 ---
-<<<<<<< HEAD
-apiVersion: v1
-kind: Service
-metadata:
-  annotations:
-    kubectl.kubernetes.io/last-applied-configuration: |
-      {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"mongo","namespace":"default"},"spec":{"ports":[{"port":27017,"protocol":"TCP","targetPort":"http"}],"selector":{"app":"mongo","tier":"backend"}}}
-  creationTimestamp: null
-  name: mongo
-  selfLink: /api/v1/namespaces/default/services/mongo
-spec:
-  ports:
-  - port: 27017
-    protocol: TCP
-    targetPort: http
-  selector:
-    app: mongo
-    tier: backend
-  sessionAffinity: None
-  type: ClusterIP
-status:
-  loadBalancer: {}
-
----
-=======
->>>>>>> 8b1ae51ec6e10385b3997be8f589c7ddf5622511
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
